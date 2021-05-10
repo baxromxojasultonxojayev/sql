@@ -1,13 +1,9 @@
 const { Pool } = require('pg')
+const { CONNECTIONSTRING } = require('../config')
 const config = require('../config')
 
 const pg_config = {
-  host: config.PGHOST,
-  user: config.PGUSER,
-  password: config.PGPASS,
-  database: config.PGDB,
-  port: config.PGPORT,
-  max: 20
+  connectionString: config.CONNECTIONSTRING
 }
 
 

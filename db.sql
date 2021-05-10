@@ -11,3 +11,7 @@ CREATE TABLE referal(
   referal_id BIGSERIAL NOT NULL PRIMARY KEY,
   referal_name VARCHAR(30) NOT NULL
 );
+
+INSERT INTO referal(referal_name) VALUES ('Telegram'), ('From Newspaper'), ('Facebook');
+
+DELETE FROM referal WHERE referal_id=4;

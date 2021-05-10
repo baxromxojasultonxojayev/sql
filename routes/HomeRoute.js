@@ -19,6 +19,21 @@ router.post('/', async (req, res)=>{
   res.redirect('/')
 })
 
+router.get('/:id', async(req, res) => {
+  const {id} = req.params;
+  await users.deleteUsers(id)
+  res.redirect('/')
+})
+
+
+router.get('/:id', async(req, res) => {
+  const {id} = req.params;
+  console.log(id);
+  await users.updateUsers(id)
+  res.redirect('/')
+})
+
+
 module.exports = {
   path: "/",
   router
